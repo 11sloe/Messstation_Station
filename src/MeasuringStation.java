@@ -13,9 +13,6 @@ public class MeasuringStation {
     }
 
     public void runSensors() {
-        Thread sensors = new Thread(){
-            @Override
-            public void run(){
                 TimerTask task = new TimerTask() {
                     Sensor t = temp;
                     @Override
@@ -26,10 +23,6 @@ public class MeasuringStation {
 
                 Timer timer = new Timer();
                 timer.scheduleAtFixedRate(task, 1000, 1000);
-            }
-        };
-
-        sensors.start();
     }
 
     public void registerObserver(Observer o){
