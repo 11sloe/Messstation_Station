@@ -19,7 +19,7 @@ public class Test implements Observer{
 
     @Override
     public void update() {
-        latestValue = m.getTemp().getValues().get(m.getTemp().getValues().size()-1);
+        latestValue = m.getTempValues().get(m.getTempValues().size()-1);
         displayValues();
     }
 
